@@ -1,0 +1,56 @@
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.exe.config
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.exe
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.pdb
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csprojResolveAssemblyReference.cache
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmLogin.resources
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Properties.Resources.resources
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csproj.GenerateResource.Cache
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.exe
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.pdb
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.FrmPrincipal.resources
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmPerfilUsuario.resources
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdPerfilUsuario.resources
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\bin\Debug\MySql.Data.dll
+C:\Users\Dayana\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmUsuario.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.exe.config
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.exe
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.pdb
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.exe
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\bin\Debug\SysFood.pdb
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\bin\Debug\MySql.Data.dll
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csprojResolveAssemblyReference.cache
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmEmpresa.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmLogin.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmPerfilUsuario.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmUsuario.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdPerfilUsuario.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.FrmPrincipal.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Properties.Resources.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csproj.GenerateResource.Cache
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdUsuario.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\bin\Debug\SysFood.exe.config
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.exe
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.pdb
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\bin\Debug\SysFood.exe
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\bin\Debug\SysFood.pdb
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\bin\Debug\MySql.Data.dll
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.csprojResolveAssemblyReference.cache
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmEmpresa.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmLogin.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmPerfilUsuario.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmUsuario.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdPerfilUsuario.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdUsuario.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.FrmPrincipal.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.Properties.Resources.resources
+C:\Users\Dayana Sabino\Desktop\Faculdade\TCC\SysFood\SysFood\obj\Debug\SysFood.csproj.GenerateResource.Cache
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdEmpresa.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmGrupo.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdGrupo.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmFormaPagamento.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdFormaPagamento.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmCliente.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdCliente.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmMercadoria.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdMercadoria.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmAtendimentoTelefonico.resources

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9FA4A19-E4F3-4AEC-B0D2-7B82E604C949}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysFood</RootNamespace>
+    <AssemblyName>SysFood</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Banco.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Conversao.cs" />
+    <Compile Include="Classes\Empresa.cs" />
+    <Compile Include="Classes\FormaPagamento.cs" />
+    <Compile Include="Classes\Grupo.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Mercadoria.cs" />
+    <Compile Include="Classes\PerfilUsuario.cs" />
+    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="Classes\Validacao.cs" />
+    <Compile Include="Forms\FrmAtendimentoTelefonico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAtendimentoTelefonico.Designer.cs">
+      <DependentUpon>FrmAtendimentoTelefonico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFormaPagamento.Designer.cs">
+      <DependentUpon>FrmFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGrupo.Designer.cs">
+      <DependentUpon>FrmGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMercadoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMercadoria.Designer.cs">
+      <DependentUpon>FrmMercadoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPerfilUsuario.Designer.cs">
+      <DependentUpon>FrmPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdCliente.Designer.cs">
+      <DependentUpon>GrdCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdEmpresa.Designer.cs">
+      <DependentUpon>GrdEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdFormaPagamento.Designer.cs">
+      <DependentUpon>GrdFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdGrupo.Designer.cs">
+      <DependentUpon>GrdGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdMercadoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdMercadoria.Designer.cs">
+      <DependentUpon>GrdMercadoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdPerfilUsuario.Designer.cs">
+      <DependentUpon>GrdPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdUsuario.Designer.cs">
+      <DependentUpon>GrdUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmAtendimentoTelefonico.resx">
+      <DependentUpon>FrmAtendimentoTelefonico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFormaPagamento.resx">
+      <DependentUpon>FrmFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGrupo.resx">
+      <DependentUpon>FrmGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMercadoria.resx">
+      <DependentUpon>FrmMercadoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPerfilUsuario.resx">
+      <DependentUpon>FrmPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdCliente.resx">
+      <DependentUpon>GrdCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdEmpresa.resx">
+      <DependentUpon>GrdEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdFormaPagamento.resx">
+      <DependentUpon>GrdFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdGrupo.resx">
+      <DependentUpon>GrdGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdMercadoria.resx">
+      <DependentUpon>GrdMercadoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdPerfilUsuario.resx">
+      <DependentUpon>GrdPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdUsuario.resx">
+      <DependentUpon>GrdUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bckg-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bckg-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-login.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
