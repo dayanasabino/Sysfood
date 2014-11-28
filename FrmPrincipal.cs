@@ -114,5 +114,12 @@ namespace SysFood
             attel.MdiParent = this;
             attel.Show();
         }
+
+        private void comandaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.FrmMesaComanda mc = new Forms.FrmMesaComanda();
+            mc.MdiParent = this;
+            mc.Show();
+        }
     }
 }

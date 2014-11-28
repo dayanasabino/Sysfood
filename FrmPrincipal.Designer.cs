@@ -170,6 +170,7 @@
             this.comandaToolStripMenuItem.Name = "comandaToolStripMenuItem";
             this.comandaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.comandaToolStripMenuItem.Text = "Comanda";
+            this.comandaToolStripMenuItem.Click += new System.EventHandler(this.comandaToolStripMenuItem_Click);
             // 
             // cardápioToolStripMenuItem
             // 

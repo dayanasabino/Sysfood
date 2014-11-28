@@ -38,6 +38,11 @@
             this.BtnBuscaCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Barras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
@@ -47,15 +52,16 @@
             this.MtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtAcrescimo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.TxtDesconto = new System.Windows.Forms.TextBox();
+            this.TxtSubTotal = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CmbMercadoria = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.TxtTotalParcial = new System.Windows.Forms.TextBox();
@@ -65,14 +71,8 @@
             this.TxtQuantidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.BtnBuscaProduto = new System.Windows.Forms.Button();
-            this.CmbMercadoria = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnRemoverItens = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -157,20 +157,56 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.ClBarras,
-            this.ClDescricao,
-            this.ClQuantidade,
-            this.ClUnitario,
-            this.ClTotal});
+            this.Barras,
+            this.Descricao,
+            this.Quantidade,
+            this.Unitario,
+            this.Total});
             this.dataGridView1.Location = new System.Drawing.Point(24, 155);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(473, 273);
             this.dataGridView1.TabIndex = 113;
+            // 
+            // Barras
+            // 
+            this.Barras.DataPropertyName = "BARRAS";
+            this.Barras.HeaderText = "Barras";
+            this.Barras.Name = "Barras";
+            this.Barras.ReadOnly = true;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "DESCRICAO";
+            this.Descricao.HeaderText = "Descricao";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.DataPropertyName = "QUANTIDADE";
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
+            // 
+            // Unitario
+            // 
+            this.Unitario.DataPropertyName = "UNITARIO";
+            this.Unitario.HeaderText = "Unitario";
+            this.Unitario.Name = "Unitario";
+            this.Unitario.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "TOTAL";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // BtnExcluir
             // 
@@ -182,6 +218,7 @@
             this.BtnExcluir.TabIndex = 117;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCancelar
             // 
@@ -193,6 +230,7 @@
             this.BtnCancelar.TabIndex = 116;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnBuscar
             // 
@@ -204,6 +242,7 @@
             this.BtnBuscar.TabIndex = 115;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnSalvar
             // 
@@ -215,12 +254,13 @@
             this.BtnSalvar.TabIndex = 114;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(393, 126);
+            this.button2.Location = new System.Drawing.Point(283, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 23);
             this.button2.TabIndex = 118;
@@ -263,14 +303,17 @@
             this.label5.TabIndex = 122;
             this.label5.Text = "Endereço:";
             // 
-            // textBox2
+            // TxtTotal
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(362, 471);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 26);
-            this.textBox2.TabIndex = 123;
+            this.TxtTotal.Enabled = false;
+            this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotal.Location = new System.Drawing.Point(362, 471);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(135, 26);
+            this.TxtTotal.TabIndex = 123;
+            this.TxtTotal.Text = "0";
+            this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTotal.TextChanged += new System.EventHandler(this.TxtTotal_TextChanged);
             // 
             // label6
             // 
@@ -300,12 +343,15 @@
             this.label8.TabIndex = 128;
             this.label8.Text = "Acréscimo:";
             // 
-            // textBox4
+            // TxtAcrescimo
             // 
-            this.textBox4.Location = new System.Drawing.Point(93, 445);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(83, 20);
-            this.textBox4.TabIndex = 127;
+            this.TxtAcrescimo.Location = new System.Drawing.Point(93, 445);
+            this.TxtAcrescimo.Name = "TxtAcrescimo";
+            this.TxtAcrescimo.Size = new System.Drawing.Size(83, 20);
+            this.TxtAcrescimo.TabIndex = 127;
+            this.TxtAcrescimo.Text = "0";
+            this.TxtAcrescimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtAcrescimo.TextChanged += new System.EventHandler(this.TxtAcrescimo_TextChanged);
             // 
             // label9
             // 
@@ -316,23 +362,28 @@
             this.label9.TabIndex = 130;
             this.label9.Text = "Desconto:";
             // 
-            // textBox5
+            // TxtDesconto
             // 
-            this.textBox5.Location = new System.Drawing.Point(258, 445);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(83, 20);
-            this.textBox5.TabIndex = 129;
+            this.TxtDesconto.Location = new System.Drawing.Point(258, 445);
+            this.TxtDesconto.Name = "TxtDesconto";
+            this.TxtDesconto.Size = new System.Drawing.Size(83, 20);
+            this.TxtDesconto.TabIndex = 129;
+            this.TxtDesconto.Text = "0";
+            this.TxtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // maskedTextBox2
+            // TxtSubTotal
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(414, 445);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(83, 20);
-            this.maskedTextBox2.TabIndex = 131;
+            this.TxtSubTotal.Location = new System.Drawing.Point(414, 445);
+            this.TxtSubTotal.Name = "TxtSubTotal";
+            this.TxtSubTotal.Size = new System.Drawing.Size(83, 20);
+            this.TxtSubTotal.TabIndex = 131;
+            this.TxtSubTotal.Text = "0";
+            this.TxtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.CmbMercadoria);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.TxtTotalParcial);
@@ -342,12 +393,20 @@
             this.panel1.Controls.Add(this.TxtQuantidade);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.BtnBuscaProduto);
-            this.panel1.Controls.Add(this.CmbMercadoria);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(24, 155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(473, 273);
             this.panel1.TabIndex = 132;
+            // 
+            // CmbMercadoria
+            // 
+            this.CmbMercadoria.FormattingEnabled = true;
+            this.CmbMercadoria.Location = new System.Drawing.Point(108, 68);
+            this.CmbMercadoria.Name = "CmbMercadoria";
+            this.CmbMercadoria.Size = new System.Drawing.Size(280, 21);
+            this.CmbMercadoria.TabIndex = 1;
+            this.CmbMercadoria.SelectedIndexChanged += new System.EventHandler(this.CmbMercadoria_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -437,15 +496,6 @@
             this.BtnBuscaProduto.UseVisualStyleBackColor = false;
             this.BtnBuscaProduto.Click += new System.EventHandler(this.BtnBuscaProduto_Click);
             // 
-            // CmbMercadoria
-            // 
-            this.CmbMercadoria.FormattingEnabled = true;
-            this.CmbMercadoria.Location = new System.Drawing.Point(108, 68);
-            this.CmbMercadoria.Name = "CmbMercadoria";
-            this.CmbMercadoria.Size = new System.Drawing.Size(280, 21);
-            this.CmbMercadoria.TabIndex = 1;
-            this.CmbMercadoria.SelectedIndexChanged += new System.EventHandler(this.CmbMercadoria_SelectedIndexChanged);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -455,36 +505,17 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Produto:";
             // 
-            // Column1
+            // BtnRemoverItens
             // 
-            this.Column1.HeaderText = " ";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 30;
-            // 
-            // ClBarras
-            // 
-            this.ClBarras.HeaderText = "Barras";
-            this.ClBarras.Name = "ClBarras";
-            // 
-            // ClDescricao
-            // 
-            this.ClDescricao.HeaderText = "Descrição";
-            this.ClDescricao.Name = "ClDescricao";
-            // 
-            // ClQuantidade
-            // 
-            this.ClQuantidade.HeaderText = "Quantidade";
-            this.ClQuantidade.Name = "ClQuantidade";
-            // 
-            // ClUnitario
-            // 
-            this.ClUnitario.HeaderText = "Unitário";
-            this.ClUnitario.Name = "ClUnitario";
-            // 
-            // ClTotal
-            // 
-            this.ClTotal.HeaderText = "Total";
-            this.ClTotal.Name = "ClTotal";
+            this.BtnRemoverItens.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnRemoverItens.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnRemoverItens.Location = new System.Drawing.Point(393, 126);
+            this.BtnRemoverItens.Name = "BtnRemoverItens";
+            this.BtnRemoverItens.Size = new System.Drawing.Size(104, 23);
+            this.BtnRemoverItens.TabIndex = 133;
+            this.BtnRemoverItens.Text = "Remover Itens";
+            this.BtnRemoverItens.UseVisualStyleBackColor = false;
+            this.BtnRemoverItens.Click += new System.EventHandler(this.BtnRemoverItens_Click);
             // 
             // FrmAtendimentoTelefonico
             // 
@@ -492,14 +523,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(524, 549);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.BtnRemoverItens);
+            this.Controls.Add(this.TxtSubTotal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.TxtDesconto);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TxtAcrescimo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.MtbTelefone);
@@ -543,7 +575,6 @@
         private System.Windows.Forms.ComboBox CmbCliente;
         private System.Windows.Forms.Button BtnBuscaCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnBuscar;
@@ -553,14 +584,14 @@
         private System.Windows.Forms.MaskedTextBox MtbTelefone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtAcrescimo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox TxtDesconto;
+        private System.Windows.Forms.MaskedTextBox TxtSubTotal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtTotalParcial;
         private System.Windows.Forms.Label label13;
@@ -573,11 +604,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClBarras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClDescricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClQuantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClTotal;
+        private System.Windows.Forms.Button BtnRemoverItens;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

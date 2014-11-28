@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AtendimentoTelefonico.cs" />
     <Compile Include="Classes\Banco.cs" />
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Conversao.cs" />
@@ -77,6 +78,12 @@
     <Compile Include="Forms\FrmEmpresa.Designer.cs">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmFinalizadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFinalizadora.Designer.cs">
+      <DependentUpon>FrmFinalizadora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmFormaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,17 +108,35 @@
     <Compile Include="Forms\FrmMercadoria.Designer.cs">
       <DependentUpon>FrmMercadoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmMesaComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMesaComanda.Designer.cs">
+      <DependentUpon>FrmMesaComanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmPerfilUsuario.Designer.cs">
       <DependentUpon>FrmPerfilUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmRecebimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRecebimentos.Designer.cs">
+      <DependentUpon>FrmRecebimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrdAtendimentoTelefonico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdAtendimentoTelefonico.Designer.cs">
+      <DependentUpon>GrdAtendimentoTelefonico.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GrdCliente.cs">
       <SubType>Form</SubType>
@@ -172,6 +197,9 @@
     <EmbeddedResource Include="Forms\FrmEmpresa.resx">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFinalizadora.resx">
+      <DependentUpon>FrmFinalizadora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFormaPagamento.resx">
       <DependentUpon>FrmFormaPagamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,11 +212,20 @@
     <EmbeddedResource Include="Forms\FrmMercadoria.resx">
       <DependentUpon>FrmMercadoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMesaComanda.resx">
+      <DependentUpon>FrmMesaComanda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPerfilUsuario.resx">
       <DependentUpon>FrmPerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRecebimentos.resx">
+      <DependentUpon>FrmRecebimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdAtendimentoTelefonico.resx">
+      <DependentUpon>GrdAtendimentoTelefonico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GrdCliente.resx">
       <DependentUpon>GrdCliente.cs</DependentUpon>

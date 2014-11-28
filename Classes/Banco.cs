@@ -230,5 +230,34 @@ namespace SysFood.Classes
             dt.Load(dr);
             return dt;
         }
+
+        public int runQueryFetchId(string sql)
+        {
+            Conectar();
+            MySqlCommand query = new MySqlCommand(sql, conn);
+            query.ExecuteNonQuery();
+
+            string lastId = "SELECT LAST_INSERT_ID() as id;";
+            int id = 0;
+
+            MySqlCommand command = new MySqlCommand(lastId, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["id"]);
+                }
+            }
+
+            else
+            {
+                id = 0;
+            }
+
+            reader.Close();
+            return id;
+        }
     }
 }
