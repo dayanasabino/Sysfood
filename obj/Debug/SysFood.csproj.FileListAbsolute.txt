@@ -56,3 +56,5 @@ C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdMe
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmAtendimentoTelefonico.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmMesaComanda.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdAtendimentoTelefonico.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmFinalizadora.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmRecebimentos.resources
