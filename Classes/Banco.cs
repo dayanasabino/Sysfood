@@ -259,5 +259,17 @@ namespace SysFood.Classes
             reader.Close();
             return id;
         }
+
+        public DataTable Finalizadoras()
+        {
+            Conectar();
+            MySqlCommand comm = new MySqlCommand();
+            comm.Connection = conn;
+            comm.CommandText = "SELECT id, descricao, gerafinanceiro, geraparcelas FROM formapagamento WHERE status = 0";
+            dr = comm.ExecuteReader();
+            dt = new DataTable();
+            dt.Load(dr);
+            return dt;
+        }
     }
 }

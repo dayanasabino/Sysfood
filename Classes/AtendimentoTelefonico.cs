@@ -99,6 +99,27 @@ namespace SysFood.Classes
             set { totalgeral = value; }
         }
 
+        private int finalizadora;
+        public int Finalizadora
+        {
+            get { return finalizadora; }
+            set { finalizadora = value; }
+        }
+
+        private int parcelas;
+        public int Parcelas
+        {
+            get { return parcelas; }
+            set { parcelas = value; }
+        }
+
+        private string descfinalizadora;
+        public string Descfinalizadora
+        {
+            get { return descfinalizadora; }
+            set { descfinalizadora = value; }
+        }
+
         int aux;
 
         public void GravarAtendimento()
@@ -109,6 +130,7 @@ namespace SysFood.Classes
                 "VALUES ('" + Datacadastro + "', '" + Cliente + "', REPLACE ('" + Acrescimo + "', ',', '.'), REPLACE ('" + Desconto + "', ',', '.'), REPLACE ('" + Subtotal + "', ',', '.'), REPLACE ('" + Total + "', ',', '.'), '" + Status + "')";
 
             aux = clBanco.runQueryFetchId(sql); // Executa a função junto ao comando acima.
+            Forms.FrmFinalizadora.vendafinalizadora = aux;
         }
 
         public void GravarAtendimentoItem()
@@ -206,6 +228,17 @@ namespace SysFood.Classes
                 clBanco.FecharConexao();
             }
             return dt;
+        }
+
+        public void GravarRecebimentos()
+        {
+            clBanco.Conectar();
+
+            string sql = "INSERT INTO recebimentos (datacadastro, finalizadora, venda_id, cliente_id, descricao, quitado, total, parcelas, status)" +
+                "VALUES ('" + Forms.FrmFinalizadora.datafinalizadora + "', '" + Descfinalizadora + "', '" + Forms.FrmFinalizadora.vendafinalizadora +"', '" + Forms.FrmFinalizadora.clientefinalizadora + "', 'Venda efetuada através do módulo telefônico', '" + 1 + "', REPLACE ('" + Total + "', ',', '.'), '" + Parcelas + "','" + 0 + "')";
+            clBanco.Executar(sql);
+
+            //passar finalizadora :(
         }
     }
 }

@@ -188,6 +188,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recebimentos.cs" />
     <EmbeddedResource Include="Forms\FrmAtendimentoTelefonico.resx">
       <DependentUpon>FrmAtendimentoTelefonico.cs</DependentUpon>
     </EmbeddedResource>

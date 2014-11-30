@@ -41,50 +41,61 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BtnBuscaCliente = new System.Windows.Forms.Button();
             this.CmbCliente = new System.Windows.Forms.ComboBox();
-            this.TxtTotalParcial = new System.Windows.Forms.TextBox();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtEndereco = new System.Windows.Forms.TextBox();
+            this.TxtDescricao = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CmbQuitado = new System.Windows.Forms.ComboBox();
+            this.TxtVenda = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtFinalizadora = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtParcelas = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnExcluir
             // 
             this.BtnExcluir.BackColor = System.Drawing.SystemColors.Control;
             this.BtnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnExcluir.Location = new System.Drawing.Point(246, 168);
+            this.BtnExcluir.Location = new System.Drawing.Point(246, 194);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(98, 23);
             this.BtnExcluir.TabIndex = 121;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(350, 168);
+            this.BtnCancelar.Location = new System.Drawing.Point(350, 194);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(98, 23);
             this.BtnCancelar.TabIndex = 120;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnBuscar
             // 
             this.BtnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscar.Location = new System.Drawing.Point(142, 168);
+            this.BtnBuscar.Location = new System.Drawing.Point(142, 194);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(98, 23);
             this.BtnBuscar.TabIndex = 119;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnSalvar
             // 
             this.BtnSalvar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSalvar.Location = new System.Drawing.Point(38, 168);
+            this.BtnSalvar.Location = new System.Drawing.Point(38, 194);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(98, 23);
             this.BtnSalvar.TabIndex = 118;
@@ -142,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 76);
+            this.label3.Location = new System.Drawing.Point(26, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 124;
@@ -152,7 +163,7 @@
             // 
             this.BtnBuscaCliente.BackColor = System.Drawing.SystemColors.Control;
             this.BtnBuscaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscaCliente.Location = new System.Drawing.Point(414, 73);
+            this.BtnBuscaCliente.Location = new System.Drawing.Point(414, 99);
             this.BtnBuscaCliente.Name = "BtnBuscaCliente";
             this.BtnBuscaCliente.Size = new System.Drawing.Size(36, 23);
             this.BtnBuscaCliente.TabIndex = 123;
@@ -162,23 +173,23 @@
             // CmbCliente
             // 
             this.CmbCliente.FormattingEnabled = true;
-            this.CmbCliente.Location = new System.Drawing.Point(74, 73);
+            this.CmbCliente.Location = new System.Drawing.Point(74, 99);
             this.CmbCliente.Name = "CmbCliente";
             this.CmbCliente.Size = new System.Drawing.Size(335, 21);
             this.CmbCliente.TabIndex = 122;
             // 
-            // TxtTotalParcial
+            // TxtTotal
             // 
-            this.TxtTotalParcial.Enabled = false;
-            this.TxtTotalParcial.Location = new System.Drawing.Point(350, 126);
-            this.TxtTotalParcial.Name = "TxtTotalParcial";
-            this.TxtTotalParcial.Size = new System.Drawing.Size(100, 20);
-            this.TxtTotalParcial.TabIndex = 126;
+            this.TxtTotal.Enabled = false;
+            this.TxtTotal.Location = new System.Drawing.Point(350, 152);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(100, 20);
+            this.TxtTotal.TabIndex = 126;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(280, 129);
+            this.label13.Location = new System.Drawing.Point(280, 155);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 13);
             this.label13.TabIndex = 125;
@@ -187,29 +198,107 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 103);
+            this.label5.Location = new System.Drawing.Point(12, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 128;
             this.label5.Text = "Descrição:";
             // 
-            // TxtEndereco
+            // TxtDescricao
             // 
-            this.TxtEndereco.Enabled = false;
-            this.TxtEndereco.Location = new System.Drawing.Point(74, 100);
-            this.TxtEndereco.Name = "TxtEndereco";
-            this.TxtEndereco.Size = new System.Drawing.Size(376, 20);
-            this.TxtEndereco.TabIndex = 127;
+            this.TxtDescricao.Enabled = false;
+            this.TxtDescricao.Location = new System.Drawing.Point(74, 126);
+            this.TxtDescricao.Name = "TxtDescricao";
+            this.TxtDescricao.Size = new System.Drawing.Size(376, 20);
+            this.TxtDescricao.TabIndex = 127;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 129;
+            this.label4.Text = "Quitado?";
+            // 
+            // CmbQuitado
+            // 
+            this.CmbQuitado.FormattingEnabled = true;
+            this.CmbQuitado.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.CmbQuitado.Location = new System.Drawing.Point(74, 152);
+            this.CmbQuitado.Name = "CmbQuitado";
+            this.CmbQuitado.Size = new System.Drawing.Size(85, 21);
+            this.CmbQuitado.TabIndex = 130;
+            // 
+            // TxtVenda
+            // 
+            this.TxtVenda.Location = new System.Drawing.Point(74, 73);
+            this.TxtVenda.Name = "TxtVenda";
+            this.TxtVenda.Size = new System.Drawing.Size(107, 20);
+            this.TxtVenda.TabIndex = 134;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 133;
+            this.label6.Text = "Nº Nota:";
+            // 
+            // TxtFinalizadora
+            // 
+            this.TxtFinalizadora.Enabled = false;
+            this.TxtFinalizadora.Location = new System.Drawing.Point(343, 73);
+            this.TxtFinalizadora.Name = "TxtFinalizadora";
+            this.TxtFinalizadora.Size = new System.Drawing.Size(107, 20);
+            this.TxtFinalizadora.TabIndex = 135;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(271, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 136;
+            this.label7.Text = "Finalizadora:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(165, 155);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 137;
+            this.label8.Text = "Parcelas:";
+            // 
+            // TxtParcelas
+            // 
+            this.TxtParcelas.Enabled = false;
+            this.TxtParcelas.Location = new System.Drawing.Point(216, 152);
+            this.TxtParcelas.Name = "TxtParcelas";
+            this.TxtParcelas.Size = new System.Drawing.Size(58, 20);
+            this.TxtParcelas.TabIndex = 138;
             // 
             // FrmRecebimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(474, 212);
+            this.ClientSize = new System.Drawing.Size(474, 243);
+            this.Controls.Add(this.TxtParcelas);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TxtFinalizadora);
+            this.Controls.Add(this.TxtVenda);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CmbQuitado);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TxtEndereco);
-            this.Controls.Add(this.TxtTotalParcial);
+            this.Controls.Add(this.TxtDescricao);
+            this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnBuscaCliente);
@@ -228,6 +317,7 @@
             this.Name = "FrmRecebimentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contas a Receber";
+            this.Load += new System.EventHandler(this.FrmRecebimentos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,9 +337,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnBuscaCliente;
         private System.Windows.Forms.ComboBox CmbCliente;
-        private System.Windows.Forms.TextBox TxtTotalParcial;
+        private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtEndereco;
+        private System.Windows.Forms.TextBox TxtDescricao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox CmbQuitado;
+        private System.Windows.Forms.TextBox TxtVenda;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtFinalizadora;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TxtParcelas;
     }
 }

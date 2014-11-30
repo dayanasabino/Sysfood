@@ -34,12 +34,27 @@ namespace SysFood.Classes
             set { status = value; }
         }
 
+        private int financeiro;
+        public int Financeiro
+        {
+            get { return financeiro; }
+            set { financeiro = value; }
+        }
+
+        private int parcelas;
+
+        public int Parcelas
+        {
+            get { return parcelas; }
+            set { parcelas = value; }
+        }
+
         Classes.Banco clBanco = new Classes.Banco();
 
         public void Salvar()
         {
-            string sql = "INSERT INTO formapagamento (empresa_id, descricao, datacadastro, status) VALUES " +
-                         "('" + 2 + "', '" + Descricao + "', '" + Datacadastro + "', '" + Status + "')";
+            string sql = "INSERT INTO formapagamento (empresa_id, descricao, datacadastro, gerafinanceiro, geraparcelas, status) VALUES " +
+                         "('" + 2 + "', '" + Descricao + "', '" + Datacadastro + "', '" + Financeiro + "', '" + Parcelas + "','" + Status + "')";
             clBanco.Executar(sql);
         }
 
@@ -75,6 +90,8 @@ namespace SysFood.Classes
                 //Idempresa = Convert.ToInt32(dr["id"]);
                 Datacadastro = dr["datacadastro"].ToString();
                 Descricao = dr["descricao"].ToString();
+                Financeiro = Convert.ToInt32(dr["gerafinanceiro"]);
+                Parcelas = Convert.ToInt32(dr["geraparcelas"]);
                 Status = Convert.ToInt32(dr["status"]);
             }
             return dr;
@@ -84,7 +101,7 @@ namespace SysFood.Classes
         {
             try
             {
-                string sql = "UPDATE formapagamento SET descricao = '" + Descricao + "', datacadastro = '" + Datacadastro + "', status = '" + Status + "' WHERE id = '" + idpagamento + "'; ";
+                string sql = "UPDATE formapagamento SET descricao = '" + Descricao + "', datacadastro = '" + Datacadastro + "', gerafinanceiro = '" + Financeiro + "', geraparcelas = '" + Parcelas + "',status = '" + Status + "' WHERE id = '" + idpagamento + "'; ";
                 clBanco.Executar(sql);
 
                 if (Status == 1)

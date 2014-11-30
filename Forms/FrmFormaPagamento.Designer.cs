@@ -40,6 +40,10 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.CmbFinanceiro = new System.Windows.Forms.ComboBox();
+            this.CmbParcelas = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CkbStatus
@@ -77,7 +81,7 @@
             // 
             this.BtnExcluir.BackColor = System.Drawing.SystemColors.Control;
             this.BtnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnExcluir.Location = new System.Drawing.Point(226, 124);
+            this.BtnExcluir.Location = new System.Drawing.Point(226, 165);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(98, 23);
             this.BtnExcluir.TabIndex = 112;
@@ -105,7 +109,7 @@
             // 
             this.BtnCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(330, 124);
+            this.BtnCancelar.Location = new System.Drawing.Point(330, 165);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(98, 23);
             this.BtnCancelar.TabIndex = 109;
@@ -117,7 +121,7 @@
             // 
             this.BtnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscar.Location = new System.Drawing.Point(122, 124);
+            this.BtnBuscar.Location = new System.Drawing.Point(122, 165);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(98, 23);
             this.BtnBuscar.TabIndex = 108;
@@ -129,7 +133,7 @@
             // 
             this.BtnSalvar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSalvar.Location = new System.Drawing.Point(18, 124);
+            this.BtnSalvar.Location = new System.Drawing.Point(18, 165);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(98, 23);
             this.BtnSalvar.TabIndex = 107;
@@ -154,12 +158,56 @@
             this.label1.TabIndex = 105;
             this.label1.Text = "Código:";
             // 
+            // CmbFinanceiro
+            // 
+            this.CmbFinanceiro.FormattingEnabled = true;
+            this.CmbFinanceiro.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.CmbFinanceiro.Location = new System.Drawing.Point(122, 109);
+            this.CmbFinanceiro.Name = "CmbFinanceiro";
+            this.CmbFinanceiro.Size = new System.Drawing.Size(96, 21);
+            this.CmbFinanceiro.TabIndex = 116;
+            // 
+            // CmbParcelas
+            // 
+            this.CmbParcelas.FormattingEnabled = true;
+            this.CmbParcelas.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.CmbParcelas.Location = new System.Drawing.Point(311, 109);
+            this.CmbParcelas.Name = "CmbParcelas";
+            this.CmbParcelas.Size = new System.Drawing.Size(96, 21);
+            this.CmbParcelas.TabIndex = 117;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 118;
+            this.label3.Text = "Gera Financeiro?";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(225, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 119;
+            this.label4.Text = "Gera Parcelas?";
+            // 
             // FrmFormaPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(448, 171);
+            this.ClientSize = new System.Drawing.Size(448, 218);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CmbParcelas);
+            this.Controls.Add(this.CmbFinanceiro);
             this.Controls.Add(this.CkbStatus);
             this.Controls.Add(this.DtpDataCadastro);
             this.Controls.Add(this.label2);
@@ -195,5 +243,9 @@
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.TextBox TxtCodigo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CmbFinanceiro;
+        private System.Windows.Forms.ComboBox CmbParcelas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

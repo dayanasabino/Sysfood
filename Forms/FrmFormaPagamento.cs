@@ -34,6 +34,11 @@ namespace SysFood.Forms
             if (CkbStatus.Checked == true) { clPagamento.Status = 0; }
             if (CkbStatus.Checked == false) { clPagamento.Status = 1; }
 
+            if (CmbFinanceiro.Text == "Sim") { clPagamento.Financeiro = 0; }
+            if (CmbFinanceiro.Text == "Não") { clPagamento.Financeiro = 1; }
+
+            if (CmbParcelas.Text == "Sim") { clPagamento.Parcelas = 0; }
+            if (CmbParcelas.Text == "Não") { clPagamento.Parcelas = 1; }
 
             if (TxtCodigo.Text == "")
             {
@@ -78,6 +83,12 @@ namespace SysFood.Forms
                 TxtDescricao.Text = clPagamento.Descricao;
                 if (clPagamento.Status == 0) { CkbStatus.Checked = true; }
                 if (clPagamento.Status == 1) { CkbStatus.Checked = false; }
+
+                if (clPagamento.Financeiro == 0) { CmbFinanceiro.Text = "Sim"; }
+                if (clPagamento.Financeiro == 1) { CmbFinanceiro.Text = "Não"; }
+
+                if (clPagamento.Parcelas == 0) { CmbParcelas.Text = "Sim"; }
+                if (clPagamento.Parcelas == 1) { CmbParcelas.Text = "Não"; }
             }
         }
 

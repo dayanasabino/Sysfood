@@ -214,6 +214,16 @@ namespace SysFood.Forms
                 clAtt.GravarAtendimentoItem();     
             }
 
+            Forms.FrmFinalizadora.totalpagamento = clAtt.Total;
+            Forms.FrmFinalizadora.datafinalizadora = clAtt.Datacadastro;
+            Forms.FrmFinalizadora.clientefinalizadora = clAtt.Cliente;
+
+            Forms.FrmFinalizadora finalizadora = new Forms.FrmFinalizadora();
+            if (finalizadora.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
+
             MessageBox.Show("Dados gravados com sucesso!", "Gravar Dados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Limpar();
         }
@@ -303,10 +313,10 @@ namespace SysFood.Forms
                 else if (c is DateTimePicker)
                     ((DateTimePicker)c).Text = string.Empty;
 
-                while (dataGridView1.Rows.Count >= 0)
+                /*while (dataGridView1.Rows.Count >= 0)
                 {
                     dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-                } 
+                } */
             }
 
         }
