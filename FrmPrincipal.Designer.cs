@@ -168,14 +168,14 @@
             // comandaToolStripMenuItem
             // 
             this.comandaToolStripMenuItem.Name = "comandaToolStripMenuItem";
-            this.comandaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.comandaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.comandaToolStripMenuItem.Text = "Comanda";
             this.comandaToolStripMenuItem.Click += new System.EventHandler(this.comandaToolStripMenuItem_Click);
             // 
             // cardápioToolStripMenuItem
             // 
             this.cardápioToolStripMenuItem.Name = "cardápioToolStripMenuItem";
-            this.cardápioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cardápioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cardápioToolStripMenuItem.Text = "Telefone";
             this.cardápioToolStripMenuItem.Click += new System.EventHandler(this.cardápioToolStripMenuItem_Click);
             // 
@@ -198,6 +198,7 @@
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
+            this.contasAReceberToolStripMenuItem.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 

@@ -101,6 +101,7 @@
             this.BtnSalvar.TabIndex = 118;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // CkbStatus
             // 
@@ -169,6 +170,7 @@
             this.BtnBuscaCliente.TabIndex = 123;
             this.BtnBuscaCliente.Text = "...";
             this.BtnBuscaCliente.UseVisualStyleBackColor = false;
+            this.BtnBuscaCliente.Click += new System.EventHandler(this.BtnBuscaCliente_Click);
             // 
             // CmbCliente
             // 
@@ -180,7 +182,6 @@
             // 
             // TxtTotal
             // 
-            this.TxtTotal.Enabled = false;
             this.TxtTotal.Location = new System.Drawing.Point(350, 152);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.Size = new System.Drawing.Size(100, 20);
@@ -206,7 +207,6 @@
             // 
             // TxtDescricao
             // 
-            this.TxtDescricao.Enabled = false;
             this.TxtDescricao.Location = new System.Drawing.Point(74, 126);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(376, 20);
@@ -250,7 +250,6 @@
             // 
             // TxtFinalizadora
             // 
-            this.TxtFinalizadora.Enabled = false;
             this.TxtFinalizadora.Location = new System.Drawing.Point(343, 73);
             this.TxtFinalizadora.Name = "TxtFinalizadora";
             this.TxtFinalizadora.Size = new System.Drawing.Size(107, 20);
@@ -276,7 +275,6 @@
             // 
             // TxtParcelas
             // 
-            this.TxtParcelas.Enabled = false;
             this.TxtParcelas.Location = new System.Drawing.Point(216, 152);
             this.TxtParcelas.Name = "TxtParcelas";
             this.TxtParcelas.Size = new System.Drawing.Size(58, 20);

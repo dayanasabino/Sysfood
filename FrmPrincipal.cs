@@ -121,5 +121,12 @@ namespace SysFood
             mc.MdiParent = this;
             mc.Show();
         }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.FrmRecebimentos recebimentos = new Forms.FrmRecebimentos();
+            recebimentos.MdiParent = this;
+            recebimentos.Show();
+        }
     }
 }

@@ -58,3 +58,4 @@ C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmMe
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdAtendimentoTelefonico.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmFinalizadora.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmRecebimentos.resources
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdRecebimento.resources

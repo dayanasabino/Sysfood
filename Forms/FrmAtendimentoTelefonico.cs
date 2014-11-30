@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -254,6 +255,18 @@ namespace SysFood.Forms
             TxtTotal.Text = TxtSubTotal.Text;
         }
 
+        public void Cliente()
+        {
+                clBanco.Conectar();
+                MySqlCommand sql = new MySqlCommand("SELECT nome FROM cliente WHERE id = '" + clAtt.Cliente + "';", clBanco.Conn);
+                MySqlDataReader dr = sql.ExecuteReader();
+                if (dr.Read())
+                {
+                    CmbCliente.Text = dr["nome"].ToString();
+                }
+
+        }
+
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             Forms.GrdAtendimentoTelefonico grAtt = new Forms.GrdAtendimentoTelefonico();
@@ -263,7 +276,7 @@ namespace SysFood.Forms
                 
                 TxtCodigo.Text = Classes.AtendimentoTelefonico.idatt.ToString();
                 DtpDataCadastro.Text = clAtt.Datacadastro;
-                CmbCliente.Text = clAtt.Cliente.ToString();
+                Cliente(); //CmbCliente.Text = clAtt.Cliente.ToString();
                 TxtAcrescimo.Text = clAtt.Acrescimo.ToString();
                 TxtDesconto.Text = clAtt.Desconto.ToString();
                 TxtSubTotal.Text = clAtt.Subtotal.ToString();

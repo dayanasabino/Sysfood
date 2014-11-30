@@ -58,6 +58,7 @@
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Mercadoria.cs" />
     <Compile Include="Classes\PerfilUsuario.cs" />
+    <Compile Include="Classes\Recebimento.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Forms\FrmAtendimentoTelefonico.cs">
@@ -174,6 +175,12 @@
     <Compile Include="Forms\GrdPerfilUsuario.Designer.cs">
       <DependentUpon>GrdPerfilUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GrdRececimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrdRececimento.Designer.cs">
+      <DependentUpon>GrdRececimento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GrdUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,7 +195,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recebimentos.cs" />
     <EmbeddedResource Include="Forms\FrmAtendimentoTelefonico.resx">
       <DependentUpon>FrmAtendimentoTelefonico.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GrdPerfilUsuario.resx">
       <DependentUpon>GrdPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrdRececimento.resx">
+      <DependentUpon>GrdRececimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GrdUsuario.resx">
       <DependentUpon>GrdUsuario.cs</DependentUpon>
