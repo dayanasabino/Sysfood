@@ -324,6 +324,7 @@
             this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 124;
             this.label6.Text = "Total:";
+            this.label6.Visible = false;
             // 
             // label7
             // 
@@ -342,6 +343,7 @@
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 128;
             this.label8.Text = "Acréscimo:";
+            this.label8.Visible = false;
             // 
             // TxtAcrescimo
             // 
@@ -351,6 +353,7 @@
             this.TxtAcrescimo.TabIndex = 127;
             this.TxtAcrescimo.Text = "0";
             this.TxtAcrescimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtAcrescimo.Visible = false;
             this.TxtAcrescimo.TextChanged += new System.EventHandler(this.TxtAcrescimo_TextChanged);
             // 
             // label9
@@ -361,6 +364,7 @@
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 130;
             this.label9.Text = "Desconto:";
+            this.label9.Visible = false;
             // 
             // TxtDesconto
             // 
@@ -370,6 +374,7 @@
             this.TxtDesconto.TabIndex = 129;
             this.TxtDesconto.Text = "0";
             this.TxtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtDesconto.Visible = false;
             // 
             // TxtSubTotal
             // 

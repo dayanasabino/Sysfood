@@ -44,6 +44,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,7 +183,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(226, 86);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 274);
             this.dataGridView1.TabIndex = 144;
             // 
             // button2
@@ -195,12 +197,36 @@
             this.button2.Text = "Remover Item";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(325, 369);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 20);
+            this.label6.TabIndex = 147;
+            this.label6.Text = "Total:";
+            this.label6.Visible = false;
+            // 
+            // TxtTotal
+            // 
+            this.TxtTotal.Enabled = false;
+            this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotal.Location = new System.Drawing.Point(379, 366);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(135, 26);
+            this.TxtTotal.TabIndex = 146;
+            this.TxtTotal.Text = "0";
+            this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FrmMesaComanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(531, 483);
+            this.ClientSize = new System.Drawing.Size(531, 484);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listBox1);
@@ -243,5 +269,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtTotal;
     }
 }
