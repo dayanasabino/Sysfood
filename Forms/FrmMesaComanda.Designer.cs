@@ -37,7 +37,7 @@
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnInserirItens = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtMesaComanda = new System.Windows.Forms.TextBox();
             this.BtnAdicionar = new System.Windows.Forms.Button();
@@ -130,16 +130,17 @@
             this.BtnBuscar.Text = "Fechar Mesa/Comanda";
             this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
-            // BtnSalvar
+            // BtnInserirItens
             // 
-            this.BtnSalvar.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSalvar.Location = new System.Drawing.Point(18, 351);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(98, 41);
-            this.BtnSalvar.TabIndex = 136;
-            this.BtnSalvar.Text = "Inserir Itens";
-            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnInserirItens.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnInserirItens.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnInserirItens.Location = new System.Drawing.Point(18, 351);
+            this.BtnInserirItens.Name = "BtnInserirItens";
+            this.BtnInserirItens.Size = new System.Drawing.Size(98, 41);
+            this.BtnInserirItens.TabIndex = 136;
+            this.BtnInserirItens.Text = "Inserir Itens";
+            this.BtnInserirItens.UseVisualStyleBackColor = false;
+            this.BtnInserirItens.Click += new System.EventHandler(this.BtnInserirItens_Click);
             // 
             // label3
             // 
@@ -236,7 +237,7 @@
             this.Controls.Add(this.BtnExcluir);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.BtnSalvar);
+            this.Controls.Add(this.BtnInserirItens);
             this.Controls.Add(this.CkbStatus);
             this.Controls.Add(this.DtpDataCadastro);
             this.Controls.Add(this.label2);
@@ -262,7 +263,7 @@
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnInserirItens;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtMesaComanda;
         private System.Windows.Forms.Button BtnAdicionar;

@@ -59,3 +59,35 @@ C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdAt
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmFinalizadora.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmRecebimentos.resources
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.GrdRecebimento.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\bin\Debug\SysFood.exe.config
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.exe
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.pdb
+C:\Users\DAYANA\Desktop\TCC\Sysfood\bin\Debug\SysFood.exe
+C:\Users\DAYANA\Desktop\TCC\Sysfood\bin\Debug\SysFood.pdb
+C:\Users\DAYANA\Desktop\TCC\Sysfood\bin\Debug\MySql.Data.dll
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.csprojResolveAssemblyReference.cache
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmAtendimentoTelefonico.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmCliente.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmEmpresa.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmFinalizadora.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmFormaPagamento.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmGrupo.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmLogin.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmMercadoria.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmMesaComanda.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmPerfilUsuario.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmRecebimentos.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmTelaVenda.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmUsuario.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdAtendimentoTelefonico.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdCliente.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdEmpresa.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdFormaPagamento.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdGrupo.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdMercadoria.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdPerfilUsuario.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdRecebimento.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdUsuario.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.FrmPrincipal.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Properties.Resources.resources
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.csproj.GenerateResource.Cache
