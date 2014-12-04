@@ -16,5 +16,18 @@ namespace SysFood.Forms
         {
             InitializeComponent();
         }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            if (!LtbMesaComanda.Items.Contains(TxtMesaComanda.Text))
+            {
+                LtbMesaComanda.Items.Add(TxtMesaComanda.Text);
+                TxtMesaComanda.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Mesa/Comanda já aberta.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

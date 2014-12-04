@@ -561,6 +561,7 @@
             this.Name = "FrmAtendimentoTelefonico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atendimento Telefônico";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.FrmAtendimentoTelefonico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);

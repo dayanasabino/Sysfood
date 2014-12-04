@@ -39,9 +39,9 @@
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.TxtMesaComanda = new System.Windows.Forms.TextBox();
+            this.BtnAdicionar = new System.Windows.Forms.Button();
+            this.LtbMesaComanda = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -150,32 +150,32 @@
             this.label3.TabIndex = 140;
             this.label3.Text = "Mesa/Comanda:";
             // 
-            // textBox1
+            // TxtMesaComanda
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(107, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 141;
+            this.TxtMesaComanda.Location = new System.Drawing.Point(107, 51);
+            this.TxtMesaComanda.Name = "TxtMesaComanda";
+            this.TxtMesaComanda.Size = new System.Drawing.Size(126, 20);
+            this.TxtMesaComanda.TabIndex = 141;
             // 
-            // button1
+            // BtnAdicionar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(239, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 23);
-            this.button1.TabIndex = 142;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnAdicionar.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnAdicionar.Location = new System.Drawing.Point(239, 50);
+            this.BtnAdicionar.Name = "BtnAdicionar";
+            this.BtnAdicionar.Size = new System.Drawing.Size(43, 23);
+            this.BtnAdicionar.TabIndex = 142;
+            this.BtnAdicionar.Text = "+";
+            this.BtnAdicionar.UseVisualStyleBackColor = false;
+            this.BtnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
-            // listBox1
+            // LtbMesaComanda
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(18, 86);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(202, 251);
-            this.listBox1.TabIndex = 143;
+            this.LtbMesaComanda.FormattingEnabled = true;
+            this.LtbMesaComanda.Location = new System.Drawing.Point(18, 86);
+            this.LtbMesaComanda.Name = "LtbMesaComanda";
+            this.LtbMesaComanda.Size = new System.Drawing.Size(202, 251);
+            this.LtbMesaComanda.TabIndex = 143;
             // 
             // dataGridView1
             // 
@@ -229,9 +229,9 @@
             this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LtbMesaComanda);
+            this.Controls.Add(this.BtnAdicionar);
+            this.Controls.Add(this.TxtMesaComanda);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnExcluir);
             this.Controls.Add(this.BtnCancelar);
@@ -264,9 +264,9 @@
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox TxtMesaComanda;
+        private System.Windows.Forms.Button BtnAdicionar;
+        private System.Windows.Forms.ListBox LtbMesaComanda;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
