@@ -123,6 +123,7 @@
             this.BtnCancelar.TabIndex = 138;
             this.BtnCancelar.Text = "Cancelar Venda";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnFechar
             // 

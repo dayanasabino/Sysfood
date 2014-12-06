@@ -94,5 +94,24 @@ namespace SysFood.Forms
                 //Limpar();
             }
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            //excluir do banco antes!
+            LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
+
+            for (int i=0; i<=DGVMesaComanda.Rows.Count; i++)
+            {
+                clMesaComanda.Retornar();
+                clMesaComanda.Deletar(iditem);
+                //DGVMesaComanda.Rows.RemoveAt(this.DGVMesaComanda.CurrentRow.Cells[0].RowIndex);
+            }
+
+
+            while (DGVMesaComanda.Rows.Count > 1)
+            {
+                DGVMesaComanda.Rows.RemoveAt(DGVMesaComanda.CurrentRow.Index);
+            }
+        }
     }
 }
