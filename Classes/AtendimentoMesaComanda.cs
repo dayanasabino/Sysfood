@@ -120,7 +120,7 @@ namespace SysFood.Classes
             {
                 aux = Convert.ToInt32(dr["id"]);
                 string sql2 = "INSERT INTO `atendimento_mesacomanda_item` (`at_mesacomanda_id`, `codigodebarras`, `descricao`, `quantidade`, `precounitario`, `total`) " +
-                "VALUES ('" + aux + "', '" + Barras + "', '" + Descricao + "', '" + Quantidade + "', REPLACE ('" + Precounitario + "', ',', '.'), REPLACE ('" + Total + "', ',', '.'));";
+                "VALUES ('" + aux + "', '" + Barras + "', '" + Descricao + "', '" + Quantidade + "', REPLACE ('" + Precounitario + "', ',', '.'), REPLACE ('" + Totalgeral + "', ',', '.'));";
 
                 clBanco.Executar(sql2);
             }
@@ -137,7 +137,7 @@ namespace SysFood.Classes
                 Forms.FrmFinalizadora.vendafinalizadora = aux;
 
                 string sql2 = "INSERT INTO `atendimento_mesacomanda_item` (`at_mesacomanda_id`, `codigodebarras`, `descricao`, `quantidade`, `precounitario`, `total`) " +
-                    "VALUES ('" + aux + "', '" + Barras + "', '" + Descricao + "', '" + Quantidade + "', REPLACE ('" + Precounitario + "', ',', '.'), REPLACE ('" + Total + "', ',', '.'));";
+                    "VALUES ('" + aux + "', '" + Barras + "', '" + Descricao + "', '" + Quantidade + "', REPLACE ('" + Precounitario + "', ',', '.'), REPLACE ('" + Totalgeral + "', ',', '.'));";
 
                 clBanco.Executar(sql2);
             }
@@ -165,11 +165,11 @@ namespace SysFood.Classes
             return dt;
         }
 
-        public void Deletar()
+        public void Deletar(int delid)
         {
             try
             {
-                string sql = "DELETE FROM atendimento_mesacomanda_item WHERE id = '" +  + "'";
+                string sql = "DELETE FROM atendimento_mesacomanda_item WHERE id = '" + delid  + "'";
                 clBanco.Executar(sql);
                 //MessageBox.Show("Dados excluídos com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -181,6 +181,18 @@ namespace SysFood.Classes
             {
                 clBanco.FecharConexao();
             }
+        }
+
+        public MySqlDataReader Retornar()
+        {
+            clBanco.Conectar();
+            MySqlCommand sql = new MySqlCommand("SELECT * FROM vmesacomanda WHERE mesacomanda = '" + Mesacomanda + "' AND aberta = 0;", clBanco.Conn);
+            MySqlDataReader dr = sql.ExecuteReader();
+            if (dr.Read())
+            {
+                Forms.FrmMesaComanda.iditem = Convert.ToInt32(dr["id"]);
+            }
+            return dr;
         }
     }
 }

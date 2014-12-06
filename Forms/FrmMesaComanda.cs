@@ -17,6 +17,8 @@ namespace SysFood.Forms
             InitializeComponent();
         }
 
+        public static int iditem; // id para exclusão de item
+
         string curItem;
         Classes.AtendimentoMesaComanda clMesaComanda = new Classes.AtendimentoMesaComanda();
         Classes.Conversao clConversao = new Classes.Conversao();
@@ -65,6 +67,14 @@ namespace SysFood.Forms
             total = Convert.ToDecimal(TxtTotal.Text);
             if (CkbStatus.Checked == true) { status = 0; }
             if (CkbStatus.Checked == false) { status = 1; }
+
+            /*Forms.FrmTelaVenda venda = new Forms.FrmTelaVenda();
+            if (venda.ShowDialog() == DialogResult.OK)
+            {
+                clMesaComanda.Mesacomanda = LtbMesaComanda.SelectedItem.ToString();
+                DGVMesaComanda.DataSource = clMesaComanda.Exibir();
+
+            } - Atualizar grid automático */
         }
 
         private void LtbMesaComanda_DoubleClick(object sender, EventArgs e)
@@ -78,7 +88,8 @@ namespace SysFood.Forms
             DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir o registro?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (resultado == DialogResult.OK)
             {
-                clMesaComanda.Deletar();
+                clMesaComanda.Retornar();
+                clMesaComanda.Deletar(iditem);
                 DGVMesaComanda.Rows.RemoveAt(this.DGVMesaComanda.CurrentRow.Cells[0].RowIndex);
                 //Limpar();
             }

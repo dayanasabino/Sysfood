@@ -72,6 +72,8 @@ namespace SysFood.Forms
             clMesaComanda.Salvar();
             this.Close();
 
+            this.DialogResult = DialogResult.OK;
+
         }
 
         private void CmbMercadoria_SelectedIndexChanged(object sender, EventArgs e)

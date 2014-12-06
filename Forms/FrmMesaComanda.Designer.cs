@@ -36,21 +36,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnInserirItens = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtMesaComanda = new System.Windows.Forms.TextBox();
             this.BtnAdicionar = new System.Windows.Forms.Button();
             this.LtbMesaComanda = new System.Windows.Forms.ListBox();
             this.DGVMesaComanda = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtTotal = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMesaComanda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,16 +124,16 @@
             this.BtnCancelar.Text = "Cancelar Venda";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
-            // BtnBuscar
+            // BtnFechar
             // 
-            this.BtnBuscar.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscar.Location = new System.Drawing.Point(112, 423);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(98, 41);
-            this.BtnBuscar.TabIndex = 137;
-            this.BtnBuscar.Text = "Fechar Mesa/Comanda";
-            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnFechar.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnFechar.Location = new System.Drawing.Point(112, 423);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(98, 41);
+            this.BtnFechar.TabIndex = 137;
+            this.BtnFechar.Text = "Fechar Mesa/Comanda";
+            this.BtnFechar.UseVisualStyleBackColor = false;
             // 
             // BtnInserirItens
             // 
@@ -200,6 +200,36 @@
             this.DGVMesaComanda.Size = new System.Drawing.Size(288, 274);
             this.DGVMesaComanda.TabIndex = 144;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "codigodebarras";
+            this.Column1.HeaderText = "Barras";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "descricao";
+            this.Column2.HeaderText = "Descrição";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "quantidade";
+            this.Column3.HeaderText = "Qtd";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "precounitario";
+            this.Column4.HeaderText = "Preço";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "total";
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
@@ -234,36 +264,6 @@
             this.TxtTotal.Text = "0";
             this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "codigodebarras";
-            this.Column1.HeaderText = "Barras";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "descricao";
-            this.Column2.HeaderText = "Descrição";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "quantidade";
-            this.Column3.HeaderText = "Qtd";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "precounitario";
-            this.Column4.HeaderText = "Preço";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "total";
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
-            // 
             // FrmMesaComanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,7 +280,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnExcluir);
             this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.BtnFechar);
             this.Controls.Add(this.BtnInserirItens);
             this.Controls.Add(this.CkbStatus);
             this.Controls.Add(this.DtpDataCadastro);
@@ -306,7 +306,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnInserirItens;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtMesaComanda;
