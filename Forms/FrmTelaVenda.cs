@@ -19,6 +19,7 @@ namespace SysFood.Forms
 
         Classes.Banco clBanco = new Classes.Banco();
         Classes.Mercadoria clMercadoria = new Classes.Mercadoria();
+        Classes.AtendimentoMesaComanda clMesaComanda = new Classes.AtendimentoMesaComanda();
 
         string varbarras;
         decimal somafinal;
@@ -54,8 +55,23 @@ namespace SysFood.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //ItensGrid(); // Adiciona os itens na grid
-            //RecalculaValores();
+
+            //Inserir dados no banco.. a grid ja vai carregar de um select e não vai 
+            //haver passagem de valores destre form para a grid.
+            clMesaComanda.Mesacomanda = Forms.FrmMesaComanda.mesacomanda;
+            clMesaComanda.Datacadastro = Forms.FrmMesaComanda.datacadastro;
+            clMesaComanda.Total = Forms.FrmMesaComanda.total;
+            clMesaComanda.Status = Forms.FrmMesaComanda.status;
+
+            clMesaComanda.Barras = Convert.ToInt32(((DataRowView)CmbMercadoria.SelectedValue)["codigodebarras"]);
+            clMesaComanda.Descricao = CmbMercadoria.Text;
+            clMesaComanda.Quantidade = Convert.ToDecimal(TxtQuantidade.Text);
+            clMesaComanda.Precounitario = Convert.ToDecimal(TxtValorUnitario.Text);
+            clMesaComanda.Totalgeral = Convert.ToDecimal(TxtTotalParcial.Text);
+
+            clMesaComanda.Salvar();
+            this.Close();
+
         }
 
         private void CmbMercadoria_SelectedIndexChanged(object sender, EventArgs e)

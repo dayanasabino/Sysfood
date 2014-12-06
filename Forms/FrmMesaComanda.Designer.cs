@@ -42,11 +42,16 @@
             this.TxtMesaComanda = new System.Windows.Forms.TextBox();
             this.BtnAdicionar = new System.Windows.Forms.Button();
             this.LtbMesaComanda = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVMesaComanda = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTotal = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMesaComanda)).BeginInit();
             this.SuspendLayout();
             // 
             // CkbStatus
@@ -177,15 +182,23 @@
             this.LtbMesaComanda.Name = "LtbMesaComanda";
             this.LtbMesaComanda.Size = new System.Drawing.Size(202, 251);
             this.LtbMesaComanda.TabIndex = 143;
+            this.LtbMesaComanda.DoubleClick += new System.EventHandler(this.LtbMesaComanda_DoubleClick);
             // 
-            // dataGridView1
+            // DGVMesaComanda
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(226, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 274);
-            this.dataGridView1.TabIndex = 144;
+            this.DGVMesaComanda.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DGVMesaComanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVMesaComanda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.DGVMesaComanda.Location = new System.Drawing.Point(226, 86);
+            this.DGVMesaComanda.Name = "DGVMesaComanda";
+            this.DGVMesaComanda.RowHeadersVisible = false;
+            this.DGVMesaComanda.Size = new System.Drawing.Size(288, 274);
+            this.DGVMesaComanda.TabIndex = 144;
             // 
             // button2
             // 
@@ -197,6 +210,7 @@
             this.button2.TabIndex = 145;
             this.button2.Text = "Remover Item";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -220,6 +234,36 @@
             this.TxtTotal.Text = "0";
             this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "codigodebarras";
+            this.Column1.HeaderText = "Barras";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "descricao";
+            this.Column2.HeaderText = "Descrição";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "quantidade";
+            this.Column3.HeaderText = "Qtd";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "precounitario";
+            this.Column4.HeaderText = "Preço";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "total";
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            // 
             // FrmMesaComanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,7 +273,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVMesaComanda);
             this.Controls.Add(this.LtbMesaComanda);
             this.Controls.Add(this.BtnAdicionar);
             this.Controls.Add(this.TxtMesaComanda);
@@ -247,7 +291,7 @@
             this.Name = "FrmMesaComanda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesa - Comanda";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMesaComanda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,9 +312,14 @@
         private System.Windows.Forms.TextBox TxtMesaComanda;
         private System.Windows.Forms.Button BtnAdicionar;
         private System.Windows.Forms.ListBox LtbMesaComanda;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVMesaComanda;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

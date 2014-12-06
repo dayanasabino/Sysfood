@@ -91,3 +91,4 @@ C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.GrdUsuario.resources
 C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.FrmPrincipal.resources
 C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Properties.Resources.resources
 C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.csproj.GenerateResource.Cache
+C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.Forms.FrmTelaVenda.resources

@@ -17,6 +17,15 @@ namespace SysFood.Forms
             InitializeComponent();
         }
 
+        string curItem;
+        Classes.AtendimentoMesaComanda clMesaComanda = new Classes.AtendimentoMesaComanda();
+        Classes.Conversao clConversao = new Classes.Conversao();
+
+        public static string mesacomanda;
+        public static string datacadastro;
+        public static decimal total;
+        public static int status;
+
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             if (TxtMesaComanda.Text == "") // verifica se textbox está preenchido.
@@ -40,7 +49,6 @@ namespace SysFood.Forms
 
         private void BtnInserirItens_Click(object sender, EventArgs e)
         {
-
             if (LtbMesaComanda.SelectedItem == null) // verifica se o item selecionado é nulo.
             {
                 MessageBox.Show("Favor selecionar uma Mesa/Comanda.");
@@ -49,10 +57,31 @@ namespace SysFood.Forms
             {
                 FrmTelaVenda telavenda = new FrmTelaVenda();
                 telavenda.Show();
-                string curItem = LtbMesaComanda.SelectedItem.ToString();
-                //curitem é o numero da mesa ou comanda
+                curItem = LtbMesaComanda.SelectedItem.ToString();
+                //curItem é o numero da mesa ou comanda
             }
+            mesacomanda = curItem;
+            datacadastro = clConversao.ConverterData(DtpDataCadastro.Text);
+            total = Convert.ToDecimal(TxtTotal.Text);
+            if (CkbStatus.Checked == true) { status = 0; }
+            if (CkbStatus.Checked == false) { status = 1; }
+        }
 
+        private void LtbMesaComanda_DoubleClick(object sender, EventArgs e)
+        {
+            clMesaComanda.Mesacomanda = LtbMesaComanda.SelectedItem.ToString();
+            DGVMesaComanda.DataSource = clMesaComanda.Exibir();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir o registro?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.OK)
+            {
+                clMesaComanda.Deletar();
+                DGVMesaComanda.Rows.RemoveAt(this.DGVMesaComanda.CurrentRow.Cells[0].RowIndex);
+                //Limpar();
+            }
         }
     }
 }
