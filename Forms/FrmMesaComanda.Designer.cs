@@ -34,9 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnFinalizar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnInserirItens = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtMesaComanda = new System.Windows.Forms.TextBox();
@@ -102,39 +101,29 @@
             this.label1.TabIndex = 131;
             this.label1.Text = "Código:";
             // 
-            // BtnExcluir
+            // BtnFinalizar
             // 
-            this.BtnExcluir.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnExcluir.Location = new System.Drawing.Point(216, 423);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(98, 41);
-            this.BtnExcluir.TabIndex = 139;
-            this.BtnExcluir.Text = "Finalizar Venda";
-            this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnFinalizar.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnFinalizar.Location = new System.Drawing.Point(144, 431);
+            this.BtnFinalizar.Name = "BtnFinalizar";
+            this.BtnFinalizar.Size = new System.Drawing.Size(98, 41);
+            this.BtnFinalizar.TabIndex = 139;
+            this.BtnFinalizar.Text = "Finalizar Venda";
+            this.BtnFinalizar.UseVisualStyleBackColor = false;
+            this.BtnFinalizar.Click += new System.EventHandler(this.BtnFinalizar_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(320, 423);
+            this.BtnCancelar.Location = new System.Drawing.Point(248, 431);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(98, 41);
             this.BtnCancelar.TabIndex = 138;
             this.BtnCancelar.Text = "Cancelar Venda";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnFechar
-            // 
-            this.BtnFechar.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnFechar.Location = new System.Drawing.Point(112, 423);
-            this.BtnFechar.Name = "BtnFechar";
-            this.BtnFechar.Size = new System.Drawing.Size(98, 41);
-            this.BtnFechar.TabIndex = 137;
-            this.BtnFechar.Text = "Fechar Mesa/Comanda";
-            this.BtnFechar.UseVisualStyleBackColor = false;
             // 
             // BtnInserirItens
             // 
@@ -279,9 +268,8 @@
             this.Controls.Add(this.BtnAdicionar);
             this.Controls.Add(this.TxtMesaComanda);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.BtnExcluir);
+            this.Controls.Add(this.BtnFinalizar);
             this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.BtnFechar);
             this.Controls.Add(this.BtnInserirItens);
             this.Controls.Add(this.CkbStatus);
             this.Controls.Add(this.DtpDataCadastro);
@@ -305,9 +293,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnExcluir;
+        private System.Windows.Forms.Button BtnFinalizar;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnInserirItens;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtMesaComanda;

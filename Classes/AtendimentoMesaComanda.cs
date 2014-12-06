@@ -194,5 +194,23 @@ namespace SysFood.Classes
             }
             return dr;
         }
+
+        public void FecharVenda()
+        {
+            try
+            {
+                string sql = "UPDATE atendimento_mesacomanda SET aberta = 1 WHERE id = '" + idatt + "'";
+                clBanco.Executar(sql);
+                MessageBox.Show("Comanda/Mesa fechada com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao fechar Mesa/Comanda.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                clBanco.FecharConexao();
+            }
+        }
     }
 }

@@ -104,10 +104,23 @@ namespace SysFood.Forms
             {
                 clMesaComanda.Retornar();
                 clMesaComanda.Deletar(iditem);
-                //DGVMesaComanda.Rows.RemoveAt(this.DGVMesaComanda.CurrentRow.Cells[0].RowIndex);
             }
+            
+            //deletar a tabela master
+            //lentidão
 
+            while (DGVMesaComanda.Rows.Count > 1)
+            {
+                DGVMesaComanda.Rows.RemoveAt(DGVMesaComanda.CurrentRow.Index);
+            }
+        }
 
+        private void BtnFinalizar_Click(object sender, EventArgs e)
+        {
+            // update para pegar a comanda e mudar o aberto para = 1!
+            clMesaComanda.FecharVenda();
+
+            LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
             while (DGVMesaComanda.Rows.Count > 1)
             {
                 DGVMesaComanda.Rows.RemoveAt(DGVMesaComanda.CurrentRow.Index);
