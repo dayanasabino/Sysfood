@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysFood.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace SysFood
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             CorFundo();
+            verificaPermissao();
         }
 
         private void perfilDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,6 +36,40 @@ namespace SysFood
             Forms.FrmUsuario usuario = new Forms.FrmUsuario();
             usuario.MdiParent = this;
             usuario.Show();
+        }
+
+        public void verificaPermissao()
+        {
+            Banco bg = new Banco();
+            string permissao = Banco.permissaoUsuario;
+
+            int acessCliente, acessEmpresa, acessFrmPagmento, acessGrupo, acessPerfil, acessMercadoria, acessUsuario, acessComanda, acessTelefone, acessRecebimento, acessRelatorio;
+
+            acessCliente = Convert.ToInt32(permissao.Substring(0, 1));
+            acessEmpresa = Convert.ToInt32(permissao.Substring(2, 1));
+            acessFrmPagmento = Convert.ToInt32(permissao.Substring(4, 1));
+            acessGrupo = Convert.ToInt32(permissao.Substring(6, 1));
+            acessPerfil = Convert.ToInt32(permissao.Substring(8, 1));
+            acessMercadoria = Convert.ToInt32(permissao.Substring(10, 1));
+            acessUsuario = Convert.ToInt32(permissao.Substring(12, 1));
+            acessComanda = Convert.ToInt32(permissao.Substring(14, 1));
+            acessTelefone = Convert.ToInt32(permissao.Substring(16, 1));
+            acessRecebimento = Convert.ToInt32(permissao.Substring(18, 1));
+            acessRelatorio = Convert.ToInt32(permissao.Substring(20, 1));
+
+            if (acessCliente == 1 ? clienteToolStripMenuItem.Enabled = true : clienteToolStripMenuItem.Enabled = false) ;
+            if (acessEmpresa == 1 ? empresaToolStripMenuItem.Enabled = true : empresaToolStripMenuItem.Enabled = false) ;
+            if (acessFrmPagmento == 1 ? formaDePagamentoToolStripMenuItem.Enabled = true : formaDePagamentoToolStripMenuItem.Enabled = false) ;
+            if (acessGrupo == 1 ? grupoToolStripMenuItem.Enabled = true : grupoToolStripMenuItem.Enabled = false) ;
+            if (acessPerfil == 1 ? perfilDeUsuárioToolStripMenuItem.Enabled = true : perfilDeUsuárioToolStripMenuItem.Enabled = false) ;
+            if (acessMercadoria == 1 ? produtoToolStripMenuItem.Enabled = true : produtoToolStripMenuItem.Enabled = false) ;
+            if (acessUsuario == 1 ? usuárioToolStripMenuItem.Enabled = true : usuárioToolStripMenuItem.Enabled = false) ;
+            if (acessComanda == 1 ? comandaToolStripMenuItem.Enabled = true : comandaToolStripMenuItem.Enabled = false) ;
+            if (acessTelefone == 1 ? cardápioToolStripMenuItem.Enabled = true : cardápioToolStripMenuItem.Enabled = false) ;
+            if (acessRecebimento == 1 ? contasAReceberToolStripMenuItem.Enabled = true : contasAReceberToolStripMenuItem.Enabled = false) ;
+            if (acessRelatorio == 1 ? relatóriosToolStripMenuItem.Enabled = true : relatóriosToolStripMenuItem.Enabled = false) ;
+ 
+
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -127,6 +163,11 @@ namespace SysFood
             Forms.FrmRecebimentos recebimentos = new Forms.FrmRecebimentos();
             recebimentos.MdiParent = this;
             recebimentos.Show();
+        }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

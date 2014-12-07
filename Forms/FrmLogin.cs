@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysFood.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace SysFood.Forms
         //Bloco de instâncias de classe.
         Classes.Banco clBanco = new Classes.Banco();
 
+        string oi;
+
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -27,7 +30,18 @@ namespace SysFood.Forms
 
         private void BtnLogar_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            oi = ((DataRowView)CmbLogin.SelectedValue)["senha"].ToString();
+            if (oi == TxtSenha.Text)
+            {
+                DialogResult = DialogResult.OK;
+                Banco bc = new Banco();
+                Banco.permissaoUsuario = ((DataRowView)CmbLogin.SelectedValue)["permissao"].ToString(); ;
+            }
+            else
+            {
+                MessageBox.Show("Senha incorreta!", "Erro", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,9 +63,11 @@ namespace SysFood.Forms
 
         public void CarregarLogin()
         {
-            clBanco.Login();
-            CmbLogin.DisplayMember = "login";
-            CmbLogin.DataSource = Classes.Banco.dt;
+           clBanco.Login();
+           CmbLogin.DisplayMember = "login";
+
+           CmbLogin.DataSource = Classes.Banco.dt;
+
         }
     }
 }

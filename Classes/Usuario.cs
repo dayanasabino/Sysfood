@@ -177,7 +177,7 @@ namespace SysFood.Classes
                         "cpf, rg, nome, sexo, datanascimento, endereco, bairro, numero, complemento, cidade_id, estado_id," +
                         "cep, telefone, celular, email, observacao, status) VALUES" +
                         "('" + idempresa + "', '" + Idperfilusuario + "', '" + Datacadastro + "', '" + Login + "'," +
-                        " MD5('" + Senha + "'), '" + Cpf + "', '" + Rg + "', '" + Nome + "' ,'" + Sexo + "', '" + datanascimento + "'," +
+                        "'" + Senha + "', '" + Cpf + "', '" + Rg + "', '" + Nome + "' ,'" + Sexo + "', '" + datanascimento + "'," +
                         "'" + Endereco + "', '" + Bairro + "', '" + Numero + "', '" + Complemento + "', '" + Cidade_id + "'," +
                         "'" + Estado_id + "', '" + Cep + "', '" + Telefone + "', '" + Celular + "', '" + Email + "'," +
                         "'" + Observacao + "', '" + Status + "')";
@@ -253,7 +253,7 @@ namespace SysFood.Classes
             try
             {
                 string sql = "UPDATE usuario SET empresa_id = '" + idempresa + "', perfilusuario_id = '" + Idperfilusuario + "', datacadastro = '" + Datacadastro + "', " +
-                    " login = '" + Login + "', senha = MD5('" + Senha + "'), cpf = '" + Cpf + "', rg = '" + Rg + "', nome = '" + Nome + "', sexo = '" + Sexo + "', " +
+                    " login = '" + Login + "', '" + Senha + "', cpf = '" + Cpf + "', rg = '" + Rg + "', nome = '" + Nome + "', sexo = '" + Sexo + "', " +
                     " datanascimento = '" + Datanascimento + "', endereco = '" + Endereco + "', bairro = '" + Bairro + "', numero = '" + Numero + "', complemento = '" + Complemento + "' , "+
                     " cidade_id = '" + Cidade_id + "', estado_id = '" + Estado_id + "', cep = '" + Cep + "', telefone = '" + Telefone + "', celular = '" + Celular + "', "+
                     " email = '" + Email + "', observacao = '" + Observacao + "', status = '" + Status + "' WHERE id = '" + idusuario + "'; ";

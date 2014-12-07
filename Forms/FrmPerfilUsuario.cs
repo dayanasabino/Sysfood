@@ -41,6 +41,7 @@ namespace SysFood.Forms
         public void LimparCampos()
         {
             TxtDescricao.Clear();
+            TxtCodigo.Clear();
 
             foreach (Control ctrl in groupBox2.Controls)
             {
@@ -75,6 +76,42 @@ namespace SysFood.Forms
             return clPerfil.Permissoes[5];
         }
 
+        public void DefineCheckbox()
+        {
+            string permissao = clPerfil.auxpermissao;
+
+            int acessCliente, acessEmpresa, acessFrmPagmento, acessGrupo, acessPerfil, acessMercadoria, acessUsuario, acessComanda, acessTelefone, acessRecebimento, acessRelatorio;
+
+            //1|1|1|1|1|1|1|1|1|1|0
+            acessCliente = Convert.ToInt32(permissao.Substring(0, 1));
+            acessEmpresa = Convert.ToInt32(permissao.Substring(2, 1));
+            acessFrmPagmento = Convert.ToInt32(permissao.Substring(4, 1));
+            acessGrupo = Convert.ToInt32(permissao.Substring(6, 1));
+            acessPerfil = Convert.ToInt32(permissao.Substring(8, 1));
+            acessMercadoria = Convert.ToInt32(permissao.Substring(10, 1));
+            acessUsuario = Convert.ToInt32(permissao.Substring(12, 1));
+            acessComanda = Convert.ToInt32(permissao.Substring(14, 1));
+            acessTelefone = Convert.ToInt32(permissao.Substring(16, 1));
+            acessRecebimento = Convert.ToInt32(permissao.Substring(18, 1));
+            acessRelatorio = Convert.ToInt32(permissao.Substring(20, 1));
+
+
+            if (acessCliente == 1 ? CkbCliente.Checked = true : CkbCliente.Checked = false); 
+            if (acessEmpresa == 1 ? CkbEmpresa.Checked = true : CkbEmpresa.Checked = false); 
+            if (acessFrmPagmento == 1 ? CkbFormadePagamento.Checked = true : CkbFormadePagamento.Checked = false); 
+            if (acessGrupo == 1 ? CkbGrupo.Checked = true : CkbGrupo.Checked = false); 
+            if (acessPerfil == 1 ? CkbPerfildeUsuario.Checked = true : CkbPerfildeUsuario.Checked = false); 
+            if (acessMercadoria == 1 ? CkbMercadoria.Checked = true : CkbMercadoria.Checked = false); 
+            if (acessUsuario == 1 ? CkbUsuario.Checked = true : CkbUsuario.Checked = false); 
+            if (acessComanda == 1 ? CkbComanda.Checked = true : CkbComanda.Checked = false); 
+            if (acessTelefone == 1 ? CkbTelefone.Checked = true : CkbTelefone.Checked = false); 
+            if (acessRecebimento == 1 ? CkbContasaReceber.Checked = true : CkbContasaReceber.Checked = false); 
+            if (acessRelatorio == 1 ? CkbRelatorios.Checked = true : CkbRelatorios.Checked = false);
+ 
+            //Porque você não olha pra mim, oooo, me diz oque que eu tenho e mal ooo By Jude
+
+        }
+
         private void BtnBuscar_Click(object sender, EventArgs e) //
         {
             Forms.GrdPerfilUsuario grdPerfil = new Forms.GrdPerfilUsuario();
@@ -84,7 +121,7 @@ namespace SysFood.Forms
                 TxtCodigo.Text = Classes.PerfilUsuario.Idperfil.ToString();
                 TxtDescricao.Text = clPerfil.Descricao;
 
-                Definicaopermissao(); // Verificar
+                DefineCheckbox(); // oi
 
                 if (clPerfil.Status == 0) { CkbStatus.Checked = true; }
                 if (clPerfil.Status == 1) { CkbStatus.Checked = false; }

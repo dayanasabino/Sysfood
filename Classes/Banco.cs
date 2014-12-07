@@ -55,6 +55,8 @@ namespace SysFood.Classes
         public static MySqlDataReader dr;
         public static DataTable linha;
 
+        public static string permissaoUsuario;
+
         public string AbrirArquivo()
         {
             StreamReader sr = new StreamReader(@"C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\conexao.ini"); //Indica o caminho de leitura do arquivo.
@@ -195,7 +197,7 @@ namespace SysFood.Classes
             Conectar();
             MySqlCommand com = new MySqlCommand();
             com.Connection = conn;
-            com.CommandText = "SELECT id, login, senha, status FROM Usuario WHERE status = 0";
+            com.CommandText = "SELECT usuario.id, usuario.login, usuario.senha,usuario.status, perfilusuario.stringperfil as permissao FROM Usuario inner join perfilusuario on usuario.perfilusuario_id = perfilusuario.id WHERE usuario.status = 0 ";
             dr = com.ExecuteReader();
             dt = new DataTable();
             dt.Load(dr);

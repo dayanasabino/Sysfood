@@ -15,6 +15,8 @@ namespace SysFood.Classes
 
         public static int Idperfil;
 
+        public string auxpermissao;
+
         private int[] permissoes;
         public int[] Permissoes
         {
@@ -69,18 +71,21 @@ namespace SysFood.Classes
 
         public MySqlDataReader Retornar()
         {
+
+
             clBanco.Conectar();
-            MySqlCommand sql = new MySqlCommand(";", clBanco.Conn);
+            MySqlCommand sql = new MySqlCommand("SELECT * FROM perfilusuario  WHERE id = '" + Idperfil + "' AND status = 0;", clBanco.Conn);
             MySqlDataReader dr = sql.ExecuteReader();
             if (dr.Read())
             {
                 Idperfil = Convert.ToInt32(dr["id"]);
                 Descricao = dr["descricao"].ToString();
-                string auxpermissao = dr["stringperfil"].ToString(); //Dividir em substring e jogar nos checkbox
+                auxpermissao = dr["stringperfil"].ToString(); //Dividir em substring e jogar nos checkbox
                 Status = Convert.ToInt32(dr["status"]);
             }
-
+            //MessageBox.Show(auxpermissao);
             return dr;
+
         }
 
         public void Editar()

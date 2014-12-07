@@ -171,7 +171,6 @@ namespace SysFood.Classes
             {
                 string sql = "DELETE FROM atendimento_mesacomanda_item WHERE id = '" + delid  + "'";
                 clBanco.Executar(sql);
-                //MessageBox.Show("Dados excluídos com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -207,6 +206,23 @@ namespace SysFood.Classes
             catch
             {
                 MessageBox.Show("Erro ao fechar Mesa/Comanda.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                clBanco.FecharConexao();
+            }
+        }
+
+        public void DeletarMesaComanda()
+        {
+            try
+            {
+                string sql = "DELETE FROM atendimento_mesacomanda WHERE id = '" + idamc + "'";
+                clBanco.Executar(sql);
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao executar comando de exclusão.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

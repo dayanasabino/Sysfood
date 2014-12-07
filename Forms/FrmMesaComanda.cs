@@ -91,7 +91,7 @@ namespace SysFood.Forms
             if (CkbStatus.Checked == true) { status = 0; }
             if (CkbStatus.Checked == false) { status = 1; }
 
-            /////////////////////////////////////////////////////////////////
+
             if (telavenda.DialogResult == DialogResult.OK)
             {
                 atualizaGrid();
@@ -126,16 +126,6 @@ namespace SysFood.Forms
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             //excluir do banco antes! 
-            if (LtbMesaComanda.SelectedIndex > 0)
-            {
-                LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
-            }
-            else
-            {
-                MessageBox.Show("Selecione uma Comanda para cancelar");
-            }
-           
-
             for (int i=0; i<=DGVMesaComanda.Rows.Count; i++)
             {
                 clMesaComanda.Retornar();
@@ -143,8 +133,9 @@ namespace SysFood.Forms
             }
             
             //deletar a tabela atendimento_mesacomanda
+            clMesaComanda.DeletarMesaComanda();
 
-            //lentidão
+            LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
 
             while (DGVMesaComanda.Rows.Count > 1)
             {
@@ -154,7 +145,7 @@ namespace SysFood.Forms
 
         private void BtnFinalizar_Click(object sender, EventArgs e)
         {
-            // update para pegar a comanda e mudar o aberto para = 1!
+            //update para pegar a comanda e mudar o aberto para = 1!
             //chama o retornar pra pegar a id
             clMesaComanda.Retornar();
             clMesaComanda.FecharVenda();
@@ -208,9 +199,6 @@ namespace SysFood.Forms
             {
                 atualizaGrid();
             }
-            
         }
-
-
     }
 }
