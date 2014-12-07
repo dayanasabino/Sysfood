@@ -140,6 +140,30 @@ namespace SysFood.Classes
             return dt;        
         }
 
+        public DataTable ItensComanda()
+        {
+            Conectar();
+            MySqlCommand com = new MySqlCommand();
+            com.Connection = conn;
+            com.CommandText = "select * from atendimento_mesacomanda_item";
+            dr = com.ExecuteReader();
+            dt = new DataTable();
+            dt.Load(dr);
+            return dt;
+        }
+
+        public DataTable Comanda()
+        {
+            Conectar();
+            MySqlCommand com = new MySqlCommand();
+            com.Connection = conn;
+            com.CommandText = "select * from atendimento_mesacomanda";
+            dr = com.ExecuteReader();
+            dt = new DataTable();
+            dt.Load(dr);
+            return dt;
+        }
+
         public DataTable Cidade(int id_estado)
         {
             Conectar();

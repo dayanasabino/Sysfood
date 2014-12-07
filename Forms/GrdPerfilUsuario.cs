@@ -38,6 +38,10 @@ namespace SysFood.Forms
             GridPerfilUsuario();
         }
 
-
+        private void DGVPerfilUsuario_DoubleClick(object sender, EventArgs e)
+        {
+            Classes.PerfilUsuario.Idperfil = Convert.ToInt32(DGVPerfilUsuario.CurrentRow.Cells[0].Value);
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

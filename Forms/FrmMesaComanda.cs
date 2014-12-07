@@ -22,6 +22,7 @@ namespace SysFood.Forms
         string curItem;
         Classes.AtendimentoMesaComanda clMesaComanda = new Classes.AtendimentoMesaComanda();
         Classes.Conversao clConversao = new Classes.Conversao();
+        Classes.Banco clBanco = new Classes.Banco();
 
         public static string mesacomanda;
         public static string datacadastro;
@@ -49,18 +50,40 @@ namespace SysFood.Forms
             }
         }
 
+        decimal ValorTotal = 0;
+
+
+        public void AtualizaTotal()
+        {
+            ValorTotal = 0;
+            DataTable dtValor = (DataTable)DGVMesaComanda.DataSource;
+
+            foreach (DataRow row in dtValor.Rows)
+            {
+                
+                decimal valor = Convert.ToDecimal(row["TOTAL"]);
+
+                ValorTotal = ValorTotal + valor;
+               
+            }
+
+            TxtTotal.Text = Convert.ToString(ValorTotal);
+            
+        }
+
         private void BtnInserirItens_Click(object sender, EventArgs e)
         {
+            FrmTelaVenda telavenda = new FrmTelaVenda();
             if (LtbMesaComanda.SelectedItem == null) // verifica se o item selecionado é nulo.
             {
                 MessageBox.Show("Favor selecionar uma Mesa/Comanda.");
             }
             else
             {
-                FrmTelaVenda telavenda = new FrmTelaVenda();
                 telavenda.Show();
                 curItem = LtbMesaComanda.SelectedItem.ToString();
                 //curItem é o numero da mesa ou comanda
+                
             }
             mesacomanda = curItem;
             datacadastro = clConversao.ConverterData(DtpDataCadastro.Text);
@@ -68,19 +91,24 @@ namespace SysFood.Forms
             if (CkbStatus.Checked == true) { status = 0; }
             if (CkbStatus.Checked == false) { status = 1; }
 
-            /*Forms.FrmTelaVenda venda = new Forms.FrmTelaVenda();
-            if (venda.ShowDialog() == DialogResult.OK)
+            /////////////////////////////////////////////////////////////////
+            if (telavenda.DialogResult == DialogResult.OK)
             {
-                clMesaComanda.Mesacomanda = LtbMesaComanda.SelectedItem.ToString();
-                DGVMesaComanda.DataSource = clMesaComanda.Exibir();
-
-            } - Atualizar grid automático */
+                atualizaGrid();
+            }
+            
         }
 
         private void LtbMesaComanda_DoubleClick(object sender, EventArgs e)
         {
+            atualizaGrid();
+        } // mudar
+
+        public void atualizaGrid()
+        {
             clMesaComanda.Mesacomanda = LtbMesaComanda.SelectedItem.ToString();
             DGVMesaComanda.DataSource = clMesaComanda.Exibir();
+            AtualizaTotal();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,8 +125,16 @@ namespace SysFood.Forms
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            //excluir do banco antes!
-            LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
+            //excluir do banco antes! 
+            if (LtbMesaComanda.SelectedIndex > 0)
+            {
+                LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma Comanda para cancelar");
+            }
+           
 
             for (int i=0; i<=DGVMesaComanda.Rows.Count; i++)
             {
@@ -106,7 +142,8 @@ namespace SysFood.Forms
                 clMesaComanda.Deletar(iditem);
             }
             
-            //deletar a tabela master
+            //deletar a tabela atendimento_mesacomanda
+
             //lentidão
 
             while (DGVMesaComanda.Rows.Count > 1)
@@ -118,7 +155,11 @@ namespace SysFood.Forms
         private void BtnFinalizar_Click(object sender, EventArgs e)
         {
             // update para pegar a comanda e mudar o aberto para = 1!
+            //chama o retornar pra pegar a id
+            clMesaComanda.Retornar();
             clMesaComanda.FecharVenda();
+
+            Forms.FrmFinalizadoraMC finalizadoramc = new FrmFinalizadoraMC();
 
             LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
             while (DGVMesaComanda.Rows.Count > 1)
@@ -126,5 +167,50 @@ namespace SysFood.Forms
                 DGVMesaComanda.Rows.RemoveAt(DGVMesaComanda.CurrentRow.Index);
             }
         }
+
+        int valor;
+        //Metodo que ira fazer um .add no Jude++
+        private void FrmMesaComanda_Load(object sender, EventArgs e)
+        {
+            CarregaComandasAbertas();
+
+            
+            foreach (var linha in LtbMesaComanda.Items)
+            {
+               valor = LtbMesaComanda.Items.Count;
+            }
+
+            if (valor > 0)
+            {
+                LtbMesaComanda.SelectedIndex = 0;
+                atualizaGrid();
+            }
+
+        }
+
+        public void CarregaComandasAbertas()
+        {
+            clBanco.Conectar();
+            DataTable dtComanda = clBanco.Comanda();
+
+            foreach (DataRow row in dtComanda.Rows)
+            {
+                if (Convert.ToInt16(row["aberta"]) == 0)
+                {
+                    LtbMesaComanda.Items.Add(Convert.ToString(row["MESACOMANDA"]));
+                }
+            }
+        }
+
+        private void LtbMesaComanda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(LtbMesaComanda.SelectedIndex > 0)
+            {
+                atualizaGrid();
+            }
+            
+        }
+
+
     }
 }

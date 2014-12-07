@@ -87,6 +87,12 @@
     <Compile Include="Forms\FrmFinalizadora.Designer.cs">
       <DependentUpon>FrmFinalizadora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmFinalizadoraMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFinalizadoraMC.Designer.cs">
+      <DependentUpon>FrmFinalizadoraMC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmFormaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFinalizadora.resx">
       <DependentUpon>FrmFinalizadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFinalizadoraMC.resx">
+      <DependentUpon>FrmFinalizadoraMC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFormaPagamento.resx">
       <DependentUpon>FrmFormaPagamento.cs</DependentUpon>

@@ -12,9 +12,12 @@ namespace SysFood.Forms
 {
     public partial class FrmTelaVenda : Form
     {
+        
+
         public FrmTelaVenda()
         {
             InitializeComponent();
+            
         }
 
         Classes.Banco clBanco = new Classes.Banco();
@@ -27,6 +30,7 @@ namespace SysFood.Forms
         private void FrmTelaVenda_Load(object sender, EventArgs e)
         {
             CarregarMercadoria();
+
         }
 
         private void BtnBuscaProduto_Click(object sender, EventArgs e)
@@ -73,7 +77,6 @@ namespace SysFood.Forms
             this.Close();
 
             this.DialogResult = DialogResult.OK;
-
         }
 
         private void CmbMercadoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,6 +100,11 @@ namespace SysFood.Forms
             {
                 SomaItem();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

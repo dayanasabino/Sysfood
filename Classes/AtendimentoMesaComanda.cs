@@ -14,7 +14,7 @@ namespace SysFood.Classes
         Classes.Banco clBanco = new Classes.Banco();
 
         //Variáveis Atendimento_MesaComanda
-        public static int idatt;
+        public static int idamc;
 
         private string datacadastro;
         public string Datacadastro
@@ -191,6 +191,7 @@ namespace SysFood.Classes
             if (dr.Read())
             {
                 Forms.FrmMesaComanda.iditem = Convert.ToInt32(dr["id"]);
+                idamc = Convert.ToInt32(dr["cod"]);
             }
             return dr;
         }
@@ -199,7 +200,7 @@ namespace SysFood.Classes
         {
             try
             {
-                string sql = "UPDATE atendimento_mesacomanda SET aberta = 1 WHERE id = '" + idatt + "'";
+                string sql = "UPDATE atendimento_mesacomanda SET aberta = 1 WHERE id = '" + idamc + "'";
                 clBanco.Executar(sql);
                 MessageBox.Show("Comanda/Mesa fechada com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

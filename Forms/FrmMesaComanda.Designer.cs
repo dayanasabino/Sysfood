@@ -44,9 +44,9 @@
             this.DGVMesaComanda = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtTotal = new System.Windows.Forms.TextBox();
@@ -172,6 +172,7 @@
             this.LtbMesaComanda.Name = "LtbMesaComanda";
             this.LtbMesaComanda.Size = new System.Drawing.Size(202, 251);
             this.LtbMesaComanda.TabIndex = 143;
+            this.LtbMesaComanda.SelectedIndexChanged += new System.EventHandler(this.LtbMesaComanda_SelectedIndexChanged);
             this.LtbMesaComanda.DoubleClick += new System.EventHandler(this.LtbMesaComanda_DoubleClick);
             // 
             // DGVMesaComanda
@@ -181,9 +182,9 @@
             this.DGVMesaComanda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column5,
             this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column4});
             this.DGVMesaComanda.Location = new System.Drawing.Point(226, 86);
             this.DGVMesaComanda.Name = "DGVMesaComanda";
             this.DGVMesaComanda.RowHeadersVisible = false;
@@ -202,6 +203,12 @@
             this.Column2.HeaderText = "Descrição";
             this.Column2.Name = "Column2";
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "total";
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            // 
             // Column3
             // 
             this.Column3.DataPropertyName = "quantidade";
@@ -213,12 +220,6 @@
             this.Column4.DataPropertyName = "precounitario";
             this.Column4.HeaderText = "Preço";
             this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "total";
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
             // 
             // button2
             // 
@@ -280,6 +281,7 @@
             this.Name = "FrmMesaComanda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesa - Comanda";
+            this.Load += new System.EventHandler(this.FrmMesaComanda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVMesaComanda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,8 +308,8 @@
         private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

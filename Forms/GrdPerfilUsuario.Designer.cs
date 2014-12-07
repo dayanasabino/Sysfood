@@ -42,6 +42,7 @@
             this.DGVPerfilUsuario.Name = "DGVPerfilUsuario";
             this.DGVPerfilUsuario.Size = new System.Drawing.Size(371, 270);
             this.DGVPerfilUsuario.TabIndex = 0;
+            this.DGVPerfilUsuario.DoubleClick += new System.EventHandler(this.DGVPerfilUsuario_DoubleClick);
             // 
             // textBox1
             // 
