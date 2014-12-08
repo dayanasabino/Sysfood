@@ -99,6 +99,7 @@
             this.BtnSalvar.TabIndex = 137;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // label6
             // 
@@ -137,6 +138,7 @@
             this.CmbFinalizadora.Name = "CmbFinalizadora";
             this.CmbFinalizadora.Size = new System.Drawing.Size(206, 21);
             this.CmbFinalizadora.TabIndex = 133;
+            this.CmbFinalizadora.SelectedIndexChanged += new System.EventHandler(this.CmbFinalizadora_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -177,6 +179,7 @@
             this.Name = "FrmFinalizadoraMC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Finalizadora";
+            this.Load += new System.EventHandler(this.FrmFinalizadoraMC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

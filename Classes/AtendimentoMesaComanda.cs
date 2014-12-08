@@ -229,5 +229,16 @@ namespace SysFood.Classes
                 clBanco.FecharConexao();
             }
         }
+
+        public void GravarRecebimentos()
+        {
+            clBanco.Conectar();
+
+            string sql = "INSERT INTO recebimentos (datacadastro, finalizadora, venda_id, cliente_id, descricao, quitado, total, parcelas, status)" +
+                "VALUES ('" + Forms.FrmFinalizadoraMC.datafinalizadora + "', '" + Descfinalizadora + "', '" + idamc + "', '" + Cliente + "', 'Venda efetuada através do módulo Mesa/Comanda', '" + 1 + "', REPLACE ('" + Total + "', ',', '.'), '" + Parcelas + "','" + 0 + "')";
+            clBanco.Executar(sql);
+
+            //passar finalizadora :(
+        }
     }
 }

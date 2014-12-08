@@ -134,8 +134,8 @@ namespace SysFood.Forms
             
             //deletar a tabela atendimento_mesacomanda
             clMesaComanda.DeletarMesaComanda();
-
             LtbMesaComanda.Items.RemoveAt(LtbMesaComanda.SelectedIndex);
+            AtualizaTotal();
 
             while (DGVMesaComanda.Rows.Count > 1)
             {
@@ -156,6 +156,15 @@ namespace SysFood.Forms
             while (DGVMesaComanda.Rows.Count > 1)
             {
                 DGVMesaComanda.Rows.RemoveAt(DGVMesaComanda.CurrentRow.Index);
+            }
+
+            Forms.FrmFinalizadoraMC.totalpagamento = Convert.ToDecimal(TxtTotal.Text);
+            Forms.FrmFinalizadoraMC.datafinalizadora = clConversao.ConverterData(DtpDataCadastro.Text);
+
+            FrmFinalizadoraMC fmc = new FrmFinalizadoraMC();
+            if (fmc.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
 
