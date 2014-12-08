@@ -164,7 +164,7 @@ namespace SysFood.Forms
 
             somafinal = total + soma;
 
-            desc = Convert.ToDecimal(TxtDesconto.Text);
+            //desc = Convert.ToDecimal(TxtDesconto.Text);
 
             TxtSubTotal.Text = somafinal.ToString();
             TxtTotal.Text = TxtSubTotal.Text;
@@ -226,6 +226,12 @@ namespace SysFood.Forms
             }
 
             MessageBox.Show("Dados gravados com sucesso!", "Gravar Dados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            while (dataGridView1.Rows.Count > 1)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            }
+
             Limpar();
         }
 
@@ -306,6 +312,10 @@ namespace SysFood.Forms
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            while (dataGridView1.Rows.Count > 1)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            }
             Limpar();
         }
 

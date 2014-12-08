@@ -93,3 +93,4 @@ C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csproj.Gene
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.exe
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.pdb
 C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\obj\Debug\SysFood.csprojResolveAssemblyReference.cache
+C:\Users\DAYANA\Desktop\TCC\Sysfood\obj\Debug\SysFood.Forms.FrmFinalizadoraMC.resources

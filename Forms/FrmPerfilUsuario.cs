@@ -31,11 +31,22 @@ namespace SysFood.Forms
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            Definicaopermissao();
-            clPerfil.Descricao = TxtDescricao.Text;
-            clPerfil.Gravar();
-            MessageBox.Show("Dados gravados com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LimparCampos();
+            if (TxtCodigo.Text == "")
+            {
+                Definicaopermissao();
+                clPerfil.Descricao = TxtDescricao.Text;
+                clPerfil.Gravar();
+                MessageBox.Show("Dados gravados com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimparCampos();
+            }
+            else
+            {
+                Definicaopermissao();
+                clPerfil.Descricao = TxtDescricao.Text;
+                clPerfil.Editar();
+                MessageBox.Show("Dados editados com sucesso!", "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimparCampos();
+            }
         }
 
         public void LimparCampos()

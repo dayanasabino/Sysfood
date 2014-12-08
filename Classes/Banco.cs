@@ -59,7 +59,7 @@ namespace SysFood.Classes
 
         public string AbrirArquivo()
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Dayana Sabino\Desktop\TCC\SysFood\SysFood\conexao.ini"); //Indica o caminho de leitura do arquivo.
+            StreamReader sr = new StreamReader(@"C:\Users\Dayana\Desktop\TCC\SysFood\conexao.ini"); //Indica o caminho de leitura do arquivo.
             string linha = ""; //Armazenará as linhas do arraylist.
             ArrayList arr = new ArrayList(); //Cria o arraylist.
             while (linha != null) //Executa o laço até linha ser difernte de nulo.

@@ -120,6 +120,7 @@
             this.TxtParcelas.TabIndex = 130;
             this.TxtParcelas.Text = "1";
             this.TxtParcelas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtParcelas.TextChanged += new System.EventHandler(this.TxtParcelas_TextChanged);
             // 
             // LblValor
             // 

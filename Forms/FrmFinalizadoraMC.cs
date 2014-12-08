@@ -27,6 +27,9 @@ namespace SysFood.Forms
         int financeiro;
         int parcelas;
 
+        decimal total, subtotal;
+        int parcela;
+
         private void FrmFinalizadoraMC_Load(object sender, EventArgs e)
         {
             CarregarFinalizadoras();
@@ -65,6 +68,8 @@ namespace SysFood.Forms
                 LblValor.Visible = true;
                 TxtParcelas.Visible = true;
                 TxtValor.Visible = true;
+
+                CalculaParcelas();
             }
 
             parcelas = Convert.ToInt32(((DataRowView)CmbFinalizadora.SelectedValue)["geraparcelas"]);
@@ -81,6 +86,23 @@ namespace SysFood.Forms
                 LblValor.Visible = true;
                 TxtParcelas.Visible = true;
                 TxtValor.Visible = true;
+                CalculaParcelas();
+            }
+        }
+
+        public void CalculaParcelas()
+        {
+            if (TxtParcelas.Text == "")
+            {
+                parcela = 1;
+            }
+            else
+            {
+                parcela = Convert.ToInt16(TxtParcelas.Text);
+                total = Convert.ToDecimal(TxtTotal.Text);
+                subtotal = (total / parcela);
+                subtotal = Math.Round(subtotal, 3);
+                TxtValor.Text = Convert.ToString(subtotal);
             }
         }
 
@@ -95,6 +117,11 @@ namespace SysFood.Forms
             
             clAtt.GravarRecebimentos();
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void TxtParcelas_TextChanged(object sender, EventArgs e)
+        {
+            CalculaParcelas();
         }
     }
 }

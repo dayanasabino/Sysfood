@@ -94,14 +94,17 @@ namespace SysFood.Classes
             {
                 per = String.Concat(Permissoes[0], '|', Permissoes[1], '|', Permissoes[2], '|', Permissoes[3], '|', Permissoes[4], '|', Permissoes[5], '|', Permissoes[6], '|', Permissoes[7], '|', Permissoes[8], '|', Permissoes[9], '|', Permissoes[10]);
             
-                string sql = "UPDATE usuario SET empresa_id = '" + Classes.Usuario.idempresa +"', descricao = '" + Descricao + "', stringperfil = '" + per + "', status = '" + Status + "' WHERE id = '" + Idperfil + "'; ";
+                string sql = "UPDATE perfilusuario SET empresa_id = '" + Classes.Usuario.idempresa +"', descricao = '" + Descricao + "', stringperfil = '" + per + "', status = '" + Status + "' WHERE id = '" + Idperfil + "'; ";
                 clBanco.Executar(sql);
 
-                DialogResult resultado = MessageBox.Show("Deseja Ativar ao salvar o cadastro?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (resultado == DialogResult.OK)
+                if (Status == 1)
                 {
-                    string sql2 = "UPDATE usuario SET status = 0 WHERE  id = '" + Idperfil + "';";
-                    clBanco.Executar(sql2);
+                    DialogResult resultado = MessageBox.Show("Deseja Ativar ao salvar o cadastro?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        string sql2 = "UPDATE usuario SET status = 0 WHERE  id = '" + Idperfil + "';";
+                        clBanco.Executar(sql2);
+                    }
                 }
             }
             catch
